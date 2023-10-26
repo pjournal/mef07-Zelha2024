@@ -2,9 +2,9 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "[STUDENT/GROUP NAME] Progress Journal",
+    "title": "Zelha Tunc Pekkan Progress Journal",
     "section": "",
-    "text": "This progress journal covers [STUDENT NAME SURNAME / PROJECT GROUP NAME]’s work during their term at BDA 503 Fall 2022.\nEach section is an assignment or an individual work."
+    "text": "Introduction\n\nThis progress journal covers [STUDENT NAME SURNAME / PROJECT GROUP NAME]’s work during their term at BDA 503 Fall 2022.\nEach section is an assignment or an individual work."
   },
   {
     "objectID": "intro.html",
@@ -32,6 +32,6 @@
     "href": "assignment1.html",
     "title": "1  Assignment 1",
     "section": "",
-    "text": "set.seed(1)\nvec1 <- sample(LETTERS,5)\npaste0(vec1,collapse=\"\")\n\n[1] \"YDGAB\""
+    "text": "This is a template example qmd output page. You may see an example R code below.\n\nset.seed(1)\nvec1 &lt;- sample(LETTERS,5)\npaste0(vec1,collapse=\"\")\n\n[1] \"YDGAB\""
   }
 ]
