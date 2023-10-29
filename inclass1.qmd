@@ -1,0 +1,13 @@
+---
+title: "inclass1"
+date: "2023-10-28"
+---
+
+
+This is a template example qmd output page. You may see an example R code below.
+
+```{r}
+set.seed(1)
+vec1 <- sample(LETTERS,5)
+paste0(vec1,collapse="")
+```
