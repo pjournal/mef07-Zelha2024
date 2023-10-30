@@ -6,12 +6,24 @@ date: "2023-10-28"
 I am a mathematics educator working with K-16 students and  in-service teachers. I am interested in how kids learn mathematics and how we can teach them better. I hope that data science can help me to understand how to model children's mathematical thinking and classroom interaction. 
 [Here is my linkedin](https://www.linkedin.com/in/tuncpekkan/)
 
+I watched the video "How to Get Your Materials Online With R"
+[Here is the video]("https://youtu.be/QcE4RBH2auQ?si=FfVFJoo9L9S9stqA)
+
+<dl>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/QcE4RBH2auQ?si=FfVFJoo9L9S9stqA&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</dl>
+
+Here is the summary:
+Educators create a lot of files for teaching- slides, exercises, solutions, assignments, data, figures- that all ultimately need to be shared with other people. Having a link for sharing your teaching materials can save you time and pain, but it is hard to get started if you’ve never shared your resources online before. In this webinar, we’ll give a tour of the R Markdown ecosystem for educators that you can start to use right away. We’ll show how it can help you make your teaching more shareable, reproducible, and resilient.
+
+The data set I propose is the PISA dataset. This is very challenging 
+[Here is the link](https://www.oecd.org/pisa/data/2015database/)  but there are packages available such as:
+[Here is the link](https://github.com/eldafani/intsvy)
+
+[Blog 1]( https://www.r-bloggers.com/2016/12/pisa-2015-how-to-readprocessplot-the-data-with-r/)
+[Blog 2](https://www.r-bloggers.com/2015/06/analyze-the-trends-in-international-mathematics-and-science-study-timss-with-r/)
+[Blog 3]( https://cran.r-project.org/web/packages/eeptools/vignettes/intro.html)
 
 
-This is a template example qmd output page. You may see an example R code below.
+PISA assesses the extent to which students near the end of compulsory education have acquired some of the knowledge and skills that are essential for full participation in society. It focuses on student competencies in the key subject areas of reading, mathematics and science.
 
-```{r}
-set.seed(1)
-vec1 <- sample(LETTERS,5)
-paste0(vec1,collapse="")
-```
