@@ -7,17 +7,10 @@
     "text": "Introduction\n\nThis progress journal covers Zelha Tunc Pekkan’s work during their term at BDA 503 Fall 2023.\nEach section is an assignment or an individual work."
   },
   {
-    "objectID": "assignment1.html",
-    "href": "assignment1.html",
-    "title": "1  Assignment 1",
-    "section": "",
-    "text": "I am a mathematics educator working with K-16 students and in-service teachers. I am interested in how kids learn mathematics and how we can teach them better. I hope that data science can help me to understand how to model children’s mathematical thinking and classroom interaction. Here is my linkedin\nI watched the video “How to Get Your Materials Online With R” Here is the video\n\n\n\n\nHere is the summary: Educators create a lot of files for teaching- slides, exercises, solutions, assignments, data, figures- that all ultimately need to be shared with other people. Having a link for sharing your teaching materials can save you time and pain, but it is hard to get started if you’ve never shared your resources online before. In this webinar, we’ll give a tour of the R Markdown ecosystem for educators that you can start to use right away. We’ll show how it can help you make your teaching more shareable, reproducible, and resilient.\nThe data set I propose is the PISA dataset. This is very challenging Here is the link but there are packages available such as: Here is the link\nBlog 1 Blog 2 Blog 3\nPISA assesses the extent to which students near the end of compulsory education have acquired some of the knowledge and skills that are essential for full participation in society. It focuses on student competencies in the key subject areas of reading, mathematics and science."
-  },
-  {
-    "objectID": "inclass1.html",
-    "href": "inclass1.html",
-    "title": "2  inclass1",
-    "section": "",
-    "text": "This is a template example qmd output page. You may see an example R code below.\n\nset.seed(1)\nvec1 &lt;- sample(LETTERS,5)\npaste0(vec1,collapse=\"\")\n\n[1] \"YDGAB\""
+    "objectID": "inclass1.html#my-first-pisa-math-data-analysis",
+    "href": "inclass1.html#my-first-pisa-math-data-analysis",
+    "title": "2  inclass1: Calculates and Plots PISA data",
+    "section": "2.1 My first PISA Math data analysis",
+    "text": "2.1 My first PISA Math data analysis\nWe used PISA 2015 data set https://www.oecd.org/pisa/data/2015database/. This data set is too big and there can easily be an entire class on this data set. The new PISA data will be available on December 5, 2023! Check it out https://pisa2022-maths.oecd.org\nOriginal data is in SPSS format and a conversion function is used."
   }
 ]
