@@ -1,0 +1,45 @@
+---
+title: "inclass2.qmd"
+format: html
+editor: visual
+---
+
+```{r}
+
+library(tidyverse)
+
+library(foreign)
+
+library(intsvy)
+
+library(dplyr)
+
+library(ggplot2)
+
+library(tidyr)
+```
+```{r}
+netflix=readr::read_csv("netflix.csv")
+netflix
+```
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+## Running Code
+
+When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+```{r}
+ggplot(netflix %>% select(release_year, user_rating_score) %>% filter(complete.cases(.)), aes(x = release_year, y = user_rating_score)) + geom_point()
+```
+
+You can add options to executable code like this
+
+```{r}
+#| echo: false
+2 * 2
+```
+
+The `echo: false` option disables the printing of code (only output is displayed).
