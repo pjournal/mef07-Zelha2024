@@ -18,6 +18,7 @@ library(ggplot2)
 
 library(tidyr)
 ```
+
 ```{r}
 netflix=readr::read_csv("netflix.csv")
 netflix
