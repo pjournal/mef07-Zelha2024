@@ -12,5 +12,26 @@
     "title": "3  inclass2.qmd",
     "section": "",
     "text": "library(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.3     ✔ readr     2.1.4\n✔ forcats   1.0.0     ✔ stringr   1.5.0\n✔ ggplot2   3.4.4     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.0\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nlibrary(foreign)\n\nlibrary(intsvy)\n\nlibrary(dplyr)\n\nlibrary(tidyr)\n\nlibrary(ggplot2)\n\n\nnetflix=readr::read_csv(\"netflix.csv\")\n\nRows: 1000 Columns: 7\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \",\"\nchr (3): title, rating, ratinglevel\ndbl (4): ratingdescription, release_year, user_rating_score, user_rating_size\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.\n\nnetflix\n\n# A tibble: 1,000 × 7\n   title     rating ratinglevel ratingdescription release_year user_rating_score\n   &lt;chr&gt;     &lt;chr&gt;  &lt;chr&gt;                   &lt;dbl&gt;        &lt;dbl&gt;             &lt;dbl&gt;\n 1 White Ch… PG-13  crude and …                80         2004                82\n 2 Lucky Nu… R      strong vio…               100         2006                NA\n 3 Grey's A… TV-14  Parents st…                90         2016                98\n 4 Prison B… TV-14  Parents st…                90         2008                98\n 5 How I Me… TV-PG  Parental g…                70         2014                94\n 6 Supernat… TV-14  Parents st…                90         2016                95\n 7 Breaking… TV-MA  For mature…               110         2013                97\n 8 The Vamp… TV-14  Parents st…                90         2017                91\n 9 The Walk… TV-MA  For mature…               110         2015                98\n10 Pretty L… TV-14  Parents st…                90         2016                96\n# ℹ 990 more rows\n# ℹ 1 more variable: user_rating_size &lt;dbl&gt;\n\n\n\nggplot(netflix %&gt;% select(release_year, user_rating_score) %&gt;%\nfilter(complete.cases(.)), \naes(x = release_year, y = user_rating_score)) + \ngeom_point()+\nlabs(\n  title= \"Movie Information\",\n  x= \"Year of the movie\",\n  y= \"User Rating\"\n  )"
+  },
+  {
+    "objectID": "shiny.html",
+    "href": "shiny.html",
+    "title": "4  SHINY",
+    "section": "",
+    "text": "hello"
+  },
+  {
+    "objectID": "or.html",
+    "href": "or.html",
+    "title": "5  OR Assignment",
+    "section": "",
+    "text": "##OR Assignment - Examine a Case (Deadline: Jan 4, 23:59)\nIn this individual assignment you are asked to choose a real life case study solved with Operations Research and briefly describe it with your own words.\n\n5.1 What course to take from online platforms for Data science?\nA student has 8 semesters to complete an online program, Total time T.\nTakes 3 courses per semester = 24 courses.\n5.2 Decision Variables\nCi is the total cost of course i.\n1) Min Total Cost of Courses = Sigma (i) (Ci).  (Objective function to minimize total spending)\n{r}\n2) Does the set of constrains to satisfy the required curriculum objectives (course contents)\nAi,j: Contents of course i, for content j\nbj: Required corse content of content j."
+  },
+  {
+    "objectID": "inclass1.html#my-first-pisa-math-data-analysis",
+    "href": "inclass1.html#my-first-pisa-math-data-analysis",
+    "title": "2  inclass1: Calculates and Plots PISA data",
+    "section": "2.1 My first PISA Math data analysis",
+    "text": "2.1 My first PISA Math data analysis\nWe used PISA 2015 data set https://www.oecd.org/pisa/data/2015database/. This data set is too big and there can easily be an entire class on this data set. The new PISA data will be available on December 5, 2023! Check it out https://pisa2022-maths.oecd.org\nOriginal data is in SPSS format and a conversion function is used."
   }
 ]

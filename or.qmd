@@ -1,0 +1,31 @@
+---
+title: " OR Assignment"
+editor: visual
+date: Dec 28, 2023
+---
+
+\##**OR Assignment - Examine a Case (Deadline: Jan 4, 23:59)**
+
+In this individual assignment you are asked to choose a real life case study solved with Operations Research and briefly describe it with your own words.
+
+-   
+
+    ## What course to take from online platforms for Data science?
+
+    A student has 8 semesters to complete an online program, Total time T.
+
+    Takes 3 courses per semester = 24 courses.
+
+    ## Decision Variables
+
+    Ci is the total cost of course i.
+
+    1\) Min Total Cost of Courses = Sigma (i) (Ci).  (Objective function to minimize total spending)
+
+    {r}
+
+    2\) Does the set of constrains to satisfy the required curriculum objectives (course contents)
+
+    Ai,j: Contents of course i, for content j
+
+    bj: Required corse content of content j.
