@@ -1,0 +1,12 @@
+"0","ggplot(netflix %>% select(release_year, user_rating_score) %>%"
+"0","filter(complete.cases(.)), "
+"0","aes(x = release_year, y = user_rating_score)) + "
+"0","geom_point()+"
+"0","labs ("
+"0","  title:""Movie Information"","
+"0","  x= ""Year of the movie"","
+"0","  y= ""User Rating"""
+"0","  )"
+"2","Error in ggplot(netflix %>% select(release_year, user_rating_score) %>%  : 
+  could not find function ""ggplot""
+"

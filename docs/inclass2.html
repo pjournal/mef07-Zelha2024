@@ -6,6 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2023-11-01">
 
 <title>Zelha Tunc Pekkan Progress Journal - 3&nbsp; inclass2.qmd</title>
 <style>
@@ -197,6 +198,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">November 1, 2023</p>
+    </div>
+  </div>
   
     
   </div>
@@ -224,17 +231,55 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span>
 <span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<pre class="{'''{r}"><code>netflix=readr::read_csv("netflix.csv")
-netflix'''</code></pre>
-<pre class="{'''{r}"><code>ggplot(netflix %&gt;% select(release_year, user_rating_score) %&gt;%
-filter(complete.cases(.)), 
-aes(x = release_year, y = user_rating_score)) + 
-geom_point()
-'''</code></pre>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>netflix<span class="ot">=</span>readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">"netflix.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Rows: 1000 Columns: 7
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (3): title, rating, ratinglevel
+dbl (4): ratingdescription, release_year, user_rating_score, user_rating_size
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>netflix</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1,000 × 7
+   title     rating ratinglevel ratingdescription release_year user_rating_score
+   &lt;chr&gt;     &lt;chr&gt;  &lt;chr&gt;                   &lt;dbl&gt;        &lt;dbl&gt;             &lt;dbl&gt;
+ 1 White Ch… PG-13  crude and …                80         2004                82
+ 2 Lucky Nu… R      strong vio…               100         2006                NA
+ 3 Grey's A… TV-14  Parents st…                90         2016                98
+ 4 Prison B… TV-14  Parents st…                90         2008                98
+ 5 How I Me… TV-PG  Parental g…                70         2014                94
+ 6 Supernat… TV-14  Parents st…                90         2016                95
+ 7 Breaking… TV-MA  For mature…               110         2013                97
+ 8 The Vamp… TV-14  Parents st…                90         2017                91
+ 9 The Walk… TV-MA  For mature…               110         2015                98
+10 Pretty L… TV-14  Parents st…                90         2016                96
+# ℹ 990 more rows
+# ℹ 1 more variable: user_rating_size &lt;dbl&gt;</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(netflix <span class="sc">%&gt;%</span> <span class="fu">select</span>(release_year, user_rating_score) <span class="sc">%&gt;%</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(<span class="fu">complete.cases</span>(.)), </span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="fu">aes</span>(<span class="at">x =</span> release_year, <span class="at">y =</span> user_rating_score)) <span class="sc">+</span> </span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="fu">geom_point</span>()<span class="sc">+</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="fu">labs</span>(</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">title=</span> <span class="st">"Movie Information"</span>,</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">x=</span> <span class="st">"Year of the movie"</span>,</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">y=</span> <span class="st">"User Rating"</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="inclass2_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
 
 
 

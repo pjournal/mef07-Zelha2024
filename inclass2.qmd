@@ -15,20 +15,24 @@ library(intsvy)
 
 library(dplyr)
 
-library(ggplot2)
-
 library(tidyr)
+
+library(ggplot2)
 ```
 
-```{'''{r}
+```{r}
 netflix=readr::read_csv("netflix.csv")
-netflix'''
+netflix
 ```
 
-```{'''{r}
+```{r}
 ggplot(netflix %>% select(release_year, user_rating_score) %>%
 filter(complete.cases(.)), 
 aes(x = release_year, y = user_rating_score)) + 
-geom_point()
-'''
+geom_point()+
+labs(
+  title= "Movie Information",
+  x= "Year of the movie",
+  y= "User Rating"
+  )
 ```
