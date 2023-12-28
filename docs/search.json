@@ -7,31 +7,10 @@
     "text": "Introduction\n\nThis progress journal covers Zelha Tunc Pekkan’s work during their term at BDA 503 Fall 2023.\nEach section is an assignment or an individual work."
   },
   {
-    "objectID": "inclass1.html#my-first-pisa-math-data-analysis",
-    "href": "inclass1.html#my-first-pisa-math-data-analysis",
-    "title": "2  inclass1: Calculates and Plots PISA data",
-    "section": "2.1 My first PISA Math data analysis",
-    "text": "2.1 My first PISA Math data analysis\nWe used PISA 2015 data set https://www.oecd.org/pisa/data/2015database/. This data set is too big and there can easily be an entire class on this data set. The new PISA data will be available on December 5, 2023! Check it out https://pisa2022-maths.oecd.org\nOriginal data is in SPSS format and a conversion function is used."
-  },
-  {
-    "objectID": "assignment1.html",
-    "href": "assignment1.html",
-    "title": "1  Assignment 1",
+    "objectID": "inclass2.html",
+    "href": "inclass2.html",
+    "title": "3  inclass2.qmd",
     "section": "",
-    "text": "I am a mathematics educator working with K-16 students and in-service teachers. I am interested in how kids learn mathematics and how we can teach them better. I hope that data science can help me to understand how to model children’s mathematical thinking and classroom interaction. Here is my linkedin\nI watched the video “How to Get Your Materials Online With R” Here is the video\n\n\n\n\nHere is the summary: Educators create a lot of files for teaching- slides, exercises, solutions, assignments, data, figures- that all ultimately need to be shared with other people. Having a link for sharing your teaching materials can save you time and pain, but it is hard to get started if you’ve never shared your resources online before. In this webinar, we’ll give a tour of the R Markdown ecosystem for educators that you can start to use right away. We’ll show how it can help you make your teaching more shareable, reproducible, and resilient.\nThe data set I propose is the PISA dataset. This is very challenging Here is the link but there are packages available such as: Here is the link\nBlog 1 Blog 2 Blog 3\nPISA assesses the extent to which students near the end of compulsory education have acquired some of the knowledge and skills that are essential for full participation in society. It focuses on student competencies in the key subject areas of reading, mathematics and science."
-  },
-  {
-    "objectID": "inclass2.html#quarto",
-    "href": "inclass2.html#quarto",
-    "title": "3  inclass2.qmd",
-    "section": "3.1 Quarto",
-    "text": "3.1 Quarto\nQuarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see https://quarto.org."
-  },
-  {
-    "objectID": "inclass2.html#running-code",
-    "href": "inclass2.html#running-code",
-    "title": "3  inclass2.qmd",
-    "section": "3.2 Running Code",
-    "text": "3.2 Running Code\nWhen you click the Render button a document will be generated that includes both content and the output of embedded code. You can embed code like this:\n\nggplot(netflix %&gt;% select(release_year, user_rating_score) %&gt;% filter(complete.cases(.)), aes(x = release_year, y = user_rating_score)) + geom_point()\n\n\n\n\nYou can add options to executable code like this\n\n\n[1] 4\n\n\nThe echo: false option disables the printing of code (only output is displayed)."
+    "text": "library(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.3     ✔ readr     2.1.4\n✔ forcats   1.0.0     ✔ stringr   1.5.0\n✔ ggplot2   3.4.4     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.0\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nlibrary(foreign)\n\nlibrary(intsvy)\n\nlibrary(dplyr)\n\nlibrary(ggplot2)\n\nlibrary(tidyr)\n\nnetflix=readr::read_csv(\"netflix.csv\")\nnetflix'''\nggplot(netflix %&gt;% select(release_year, user_rating_score) %&gt;%\nfilter(complete.cases(.)), \naes(x = release_year, y = user_rating_score)) + \ngeom_point()\n'''"
   }
 ]
