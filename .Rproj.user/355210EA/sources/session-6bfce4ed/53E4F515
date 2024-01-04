@@ -3,7 +3,7 @@
     "path": "~/Documents/GitHub/mef07-Zelha2024/inclass2.qmd",
     "project_path": "inclass2.qmd",
     "type": "quarto_markdown",
-    "hash": "0",
+    "hash": "3045783328",
     "contents": "",
     "dirty": false,
     "created": 1703799923883.0,
@@ -16,7 +16,7 @@
         "Source": "Source",
         "docOutlineVisible": "1",
         "rmdVisualCollapsedChunks": "",
-        "rmdVisualModeLocation": "243:417",
+        "rmdVisualModeLocation": "2:0",
         "cursorPosition": "7,0",
         "scrollLine": "0"
     },
@@ -25,7 +25,7 @@
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1703801847787,
+    "last_content_update": 1704369502389,
     "read_only": false,
     "read_only_alternatives": []
 }

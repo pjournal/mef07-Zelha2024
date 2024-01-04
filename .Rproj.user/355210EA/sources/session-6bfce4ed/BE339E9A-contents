@@ -10,22 +10,24 @@ In this individual assignment you are asked to choose a real life case study sol
 
 -   
 
-    ## What course to take from online platforms for Data science?
+    ## Problem: What courses to take from online platforms for Data science so we can finish the program requirements and pay just enough?
 
     A student has 8 semesters to complete an online program, Total time T.
 
     Takes 3 courses per semester = 24 courses.
 
-    ## Decision Variables
+    ## Solution: Decision Variables
 
     Ci is the total cost of course i.
 
     1\) Min Total Cost of Courses = Sigma (i) (Ci).  (Objective function to minimize total spending)
-
-    {r}
 
     2\) Does the set of constrains to satisfy the required curriculum objectives (course contents)
 
     Ai,j: Contents of course i, for content j
 
     bj: Required corse content of content j.
+
+-   Solution and Model:
+
+Similar to the Model for the solution of the Diet problem (or [Stigler Diet](https://en.wikipedia.org/wiki/Stigler_diet))

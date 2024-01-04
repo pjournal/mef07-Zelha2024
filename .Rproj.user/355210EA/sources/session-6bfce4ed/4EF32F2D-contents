@@ -1,0 +1,21 @@
+---
+title: "PISA-DENEME"
+editor: visual
+---
+
+library(tidyverse)
+
+library(intsvy)
+
+library(dplyr)
+
+library(readxl)
+
+library(ggplot2) library(here)
+
+------------------------------------------------------------------------
+
+```{r}
+netflix=readr::read_csv("netflix.csv")
+netflix
+```
