@@ -1,0 +1,16 @@
+[
+  {
+    "objectID": "or.html",
+    "href": "or.html",
+    "title": "5  OR Assignment",
+    "section": "",
+    "text": "##OR Assignment - Examine a Case (Deadline: Jan 4, 23:59)\nIn this individual assignment you are asked to choose a real life case study solved with Operations Research and briefly describe it with your own words.\n\n5.1 Problem: What courses to take from online platforms for Data science so we can finish the program requirements and pay just enough?\nA student has 8 semesters to complete an online program, Total time T.\nTakes 3 courses per semester = 24 courses.\n5.2 Solution: Decision Variables\nCi is the total cost of course i.\n1) Min Total Cost of Courses = Sigma (i) (Ci).  (Objective function to minimize total spending)\n2) Does the set of constrains to satisfy the required curriculum objectives (course contents)\nAi,j: Contents of course i, for content j\nbj: Required corse content of content j.\nSolution and Model:\n\nSimilar to the Model for the solution of the Diet problem (or Stigler Diet)"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Zelha Tunc Pekkan Progress Journal",
+    "section": "",
+    "text": "Introduction\n\nThis progress journal covers Zelha Tunc Pekkan’s work during their term at BDA 503 Fall 2023.\nEach section is an assignment or an individual work."
+  }
+]

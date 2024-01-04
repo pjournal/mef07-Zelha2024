@@ -3,7 +3,7 @@
     "path": "~/Documents/GitHub/mef07-Zelha2024/index.tex",
     "project_path": "index.tex",
     "type": "tex",
-    "hash": "3227101327",
+    "hash": "0",
     "contents": "",
     "dirty": false,
     "created": 1703802084614.0,
@@ -11,14 +11,16 @@
     "relative_order": 5,
     "properties": {
         "source_window_id": "",
-        "Source": "Source"
+        "Source": "Source",
+        "cursorPosition": "0,0",
+        "scrollLine": "4"
     },
     "folds": "",
-    "lastKnownWriteTime": 1701359909,
+    "lastKnownWriteTime": 1704370804,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1701359909,
+    "last_content_update": 1704370804,
     "read_only": false,
     "read_only_alternatives": []
 }

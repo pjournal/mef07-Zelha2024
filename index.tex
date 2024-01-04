@@ -194,7 +194,7 @@
 
 \begin{document}
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, borderline west={3pt}{0pt}{shadecolor}, sharp corners, enhanced, breakable, boxrule=0pt, frame hidden]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[frame hidden, boxrule=0pt, sharp corners, interior hidden, borderline west={3pt}{0pt}{shadecolor}, enhanced, breakable]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Table of contents}
 {
@@ -309,9 +309,9 @@ i Use the conflicted package (<http://conflicted.r-lib.org/>) to force all confl
 
 \FunctionTok{library}\NormalTok{(dplyr)}
 
-\FunctionTok{library}\NormalTok{(ggplot2)}
-
 \FunctionTok{library}\NormalTok{(tidyr)}
+
+\FunctionTok{library}\NormalTok{(ggplot2)}
 \end{Highlighting}
 \end{Shaded}
 
@@ -358,7 +358,15 @@ i Specify the column types or set `show_col_types = FALSE` to quiet this message
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\FunctionTok{ggplot}\NormalTok{(netflix }\SpecialCharTok{\%\textgreater{}\%} \FunctionTok{select}\NormalTok{(release\_year, user\_rating\_score) }\SpecialCharTok{\%\textgreater{}\%} \FunctionTok{filter}\NormalTok{(}\FunctionTok{complete.cases}\NormalTok{(.)), }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ release\_year, }\AttributeTok{y =}\NormalTok{ user\_rating\_score)) }\SpecialCharTok{+} \FunctionTok{geom\_point}\NormalTok{()}
+\FunctionTok{ggplot}\NormalTok{(netflix }\SpecialCharTok{\%\textgreater{}\%} \FunctionTok{select}\NormalTok{(release\_year, user\_rating\_score) }\SpecialCharTok{\%\textgreater{}\%}
+\FunctionTok{filter}\NormalTok{(}\FunctionTok{complete.cases}\NormalTok{(.)), }
+\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ release\_year, }\AttributeTok{y =}\NormalTok{ user\_rating\_score)) }\SpecialCharTok{+} 
+\FunctionTok{geom\_point}\NormalTok{()}\SpecialCharTok{+}
+\FunctionTok{labs}\NormalTok{(}
+  \AttributeTok{title=} \StringTok{"Movie Information"}\NormalTok{,}
+  \AttributeTok{x=} \StringTok{"Year of the movie"}\NormalTok{,}
+  \AttributeTok{y=} \StringTok{"User Rating"}
+\NormalTok{  )}
 \end{Highlighting}
 \end{Shaded}
 
@@ -369,6 +377,68 @@ i Specify the column types or set `show_col_types = FALSE` to quiet this message
 }
 
 \end{figure}
+
+\bookmarksetup{startatroot}
+
+\hypertarget{shiny}{%
+\chapter{SHINY}\label{shiny}}
+
+SHINY
+
+Here is my Shiny Project:
+
+Here you can select 3 countries, and three levels of performance in 2022
+PISA math test (level 1 (low), Level 3, (medium) and Level 6 (high)
+performing students Percentage.) You can also choose whether it is
+\textbf{Government (g)} or \textbf{Private(p)} schools and within those
+schools how they perform: for example, \% of government schools that
+perform on low level will be \textbf{\emph{glevel1a}}
+
+\url{https://foxy.shinyapps.io/try_shine/}
+
+\bookmarksetup{startatroot}
+
+\hypertarget{or-assignment}{%
+\chapter{OR Assignment}\label{or-assignment}}
+
+\#\#\textbf{OR Assignment - Examine a Case (Deadline: Jan 4, 23:59)}
+
+In this individual assignment you are asked to choose a real life case
+study solved with Operations Research and briefly describe it with your
+own words.
+
+\begin{itemize}
+\item ~
+  \hypertarget{problem-what-courses-to-take-from-online-platforms-for-data-science-so-we-can-finish-the-program-requirements-and-pay-just-enough}{%
+  \section{Problem: What courses to take from online platforms for Data
+  science so we can finish the program requirements and pay just
+  enough?}\label{problem-what-courses-to-take-from-online-platforms-for-data-science-so-we-can-finish-the-program-requirements-and-pay-just-enough}}
+
+  A student has 8 semesters to complete an online program, Total time T.
+
+  Takes 3 courses per semester = 24 courses.
+
+  \hypertarget{solution-decision-variables}{%
+  \section{Solution: Decision
+  Variables}\label{solution-decision-variables}}
+
+  Ci is the total cost of course i.
+
+  1) Min Total Cost of Courses = Sigma (i) (Ci).~ (Objective function to
+  minimize total spending)
+
+  2) Does the set of constrains to satisfy the required curriculum
+  objectives (course contents)
+
+  Ai,j: Contents of course i, for content j
+
+  bj: Required corse content of content j.
+\item
+  Solution and Model:
+\end{itemize}
+
+Similar to the Model for the solution of the Diet problem
+(or~\href{https://en.wikipedia.org/wiki/Stigler_diet}{Stigler Diet})
 
 
 
