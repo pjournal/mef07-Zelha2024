@@ -1,0 +1,70 @@
+---
+title: "inclass1: Calculates and Plots PISA data"
+date: "2023-10-28"
+format: html
+editor: visual
+---
+
+```{r}
+#| label: load-packages
+#| include: false
+
+library(tidyverse)
+library(foreign)
+library(intsvy)
+library(dplyr)
+library(ggplot2)
+library(tidyr)
+
+```
+
+
+## My first PISA Math data analysis
+
+We used PISA 2015 data set <https://www.oecd.org/pisa/data/2015database/>. This data set is too big and there can easily be an entire class on this data set. The new PISA data will be available on December 5, 2023! Check it out <https://pisa2022-maths.oecd.org>
+
+Original data is in SPSS format and a conversion function is used.
+
+
+```{r}
+#| warning: false
+#| echo: false
+
+pisa_data_path <- "/Users/zelhapekkan/Downloads/PUF_SPSS_COMBINED_CMB_STU_QQQ"
+#setwd("~/MEF_assignments/pisa")
+pisafile = paste(pisa_data_path, "/CY6_MS_CMB_STU_QQQ.sav", sep = "")
+
+stud2015 <- read.spss(pisafile, use.value.labels = TRUE, to.data.frame = TRUE)
+#
+genderMath <- pisa.mean.pv(pvlabel = paste0("PV",1:10,"MATH"), by = c("CNT", "ST004D01T"), data = stud2015)
+
+genderMath <- genderMath[,c(1,2,4,5)]
+genderMath %>%
+  select(CNT, ST004D01T, Mean) %>%
+  spread(ST004D01T, Mean) -> genderMathWide
+
+genderMathSelected <-
+  genderMathWide %>%
+  filter(CNT %in% c("Turkey", "Japan", "Switzerland",  "Poland", "Singapore", "Finland", "Singapore", "Korea", "United States"))
+```
+
+```{r}
+#| label: plot-pisa
+#| warning: false
+#| echo: false
+
+ggplot(genderMathWide, aes(Female, Male)) +
+  geom_point() +
+  geom_point(data=genderMathSelected, color="red") +
+  geom_text(data=genderMathSelected, aes(label=CNT), color="grey20") +
+  geom_abline(slope=1, intercept = 0) + 
+  geom_abline(slope=1, intercept = 20, linetype = 2, color="grey") + 
+  geom_abline(slope=1, intercept = -20, linetype = 2, color="grey") +
+  geom_text(x=425, y=460, label="Boys +20 points", angle=45, color="grey", size=8) + 
+  geom_text(x=460, y=425, label="Girls +20 points", angle=45, color="grey", size=8) + 
+  coord_fixed(xlim = c(400,565), ylim = c(400,565)) +
+  theme_bw() + ggtitle("PISA 2015 in Math - Gender Gap") +
+  xlab("PISA 2015 Math score for girls") +
+  ylab("PISA 2015 Math score for boys")
+```
+
